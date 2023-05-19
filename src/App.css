@@ -1,0 +1,27 @@
+.universities{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  margin: auto 15%;
+}
+.item{
+  border-left: 7px solid rgb(109, 196, 218);
+  border-bottom: 1px solid black;
+  border-radius: 5%;
+  box-shadow: 5px;
+  padding: 20px;
+  background-color:aqua;
+}
+h1{
+  size: large;
+}
+.header{
+  margin-left:20px ;
+  padding: 5px;
+}
+button{
+  margin-left:10px ;
+}
+.header input{
+  padding: 10px;
+}
