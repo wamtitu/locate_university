@@ -30,6 +30,7 @@ function App() {
   return (
     <>
       <div className='header'>
+        <p>serach universities here</p>
         <input onChange={handleChange}/>
         <button onClick={searchUniversity}>search</button>
         <h1>List of universities in {country}</h1>
