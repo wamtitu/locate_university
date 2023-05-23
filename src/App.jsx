@@ -6,19 +6,21 @@ function App() {
   const [country, setCountry] = useState('');
   const [university, setUniversity] = useState([]);
 
-  let search = ''
+  let search;
   const handleChange = (e)=>{
       search =e.target.value
   }
   const searchUniversity = ()=>{
-    setCountry(search);
+    setCountry(search)
   }
   useEffect(()=>{
     const fetchUniversity = async ()=>{
       try{
-        const response = await fetch(`http://universities.hipolabs.com/search?country=${country} `)
+        
+          const response = await fetch(`https://universitiesapi.onrender.com/v1/api/universities/${country} `)
         const universities = await response.json()
-        setUniversity(universities)
+        if(country)setUniversity(universities)
+        
       }catch(error){
         console.log(error)
       }
@@ -30,7 +32,7 @@ function App() {
   return (
     <>
       <div className='header'>
-        <p>serach universities here</p>
+        <p>search universities here</p>
         <input onChange={handleChange}/>
         <button onClick={searchUniversity}>search</button>
         <h1>List of universities in {country}</h1>
